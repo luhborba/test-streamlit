@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "projeto-validacao-excel"
+version = "0.1.0"
+description = "Projeto de validacao de excel"
+authors = ["Brunocodigoestudo <brunoeng.proj@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.5"
+streamlit = "^1.31.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
