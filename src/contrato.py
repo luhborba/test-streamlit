@@ -4,9 +4,9 @@ from enum import Enum
 
 
 class CategoriaEnum(str, Enum):
-    categoria1: "categoria1"
-    categoria2: "categoria2"
-    categoria3: "categoria3"
+    categoria1 = "categoria1"
+    categoria2 = "categoria2"
+    categoria3 = "categoria3"
 
 
 class Vendas(BaseModel):
@@ -15,7 +15,7 @@ class Vendas(BaseModel):
     valor: PositiveFloat
     produto: str
     quantidade: PositiveInt
-    categoria: str
+    categoria: CategoriaEnum
 
     @field_validator('categoria')
     def categoria_deve_estar_no_enum(cls, error):
