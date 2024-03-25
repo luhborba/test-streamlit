@@ -10,13 +10,13 @@ class CategoriaEnum(str, Enum):
 
 
 class Vendas(BaseModel):
-    email: EmailStr
-    data: datetime
-    valor: PositiveFloat
-    produto: str
-    quantidade: PositiveInt
-    categoria: CategoriaEnum
+    Email: EmailStr
+    Data: datetime
+    Valor: PositiveFloat
+    Produto: str
+    Quantidade: PositiveInt
+    Categoria: CategoriaEnum
 
-    @field_validator('categoria')
+    @field_validator('Categoria')
     def categoria_deve_estar_no_enum(cls, error):
         return error
